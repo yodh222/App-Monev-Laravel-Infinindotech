@@ -17,7 +17,9 @@ class MasterDaerahFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'kode_daerah' => $this->faker->unique()->postcode,
+            'nama_daerah' => $this->faker->city,
+            'jenis_daerah' => $this->faker->randomElement(['Kabupaten', 'Kota']),
         ];
     }
 }

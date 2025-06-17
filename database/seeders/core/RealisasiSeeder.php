@@ -1,8 +1,8 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders\core;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Realisasi;
 use Illuminate\Database\Seeder;
 
 class RealisasiSeeder extends Seeder
@@ -12,6 +12,6 @@ class RealisasiSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Realisasi::factory()->count(10)->create();
     }
 }

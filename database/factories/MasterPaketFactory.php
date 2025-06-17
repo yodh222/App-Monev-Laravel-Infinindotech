@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\MasterSubKegiatan;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class MasterPaketFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'kode_paket' => $this->faker->unique()->numerify('PKT###'),
+            'nama_paket' => $this->faker->sentence(2),
+            'master_sub_kegiatan_id' => MasterSubKegiatan::inRandomOrder()->value('id'),
+            'pagu' => $this->faker->randomFloat(2, 0, 1000000),
         ];
     }
 }

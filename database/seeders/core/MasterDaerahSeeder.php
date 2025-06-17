@@ -1,8 +1,8 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders\core;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\MasterDaerah;
 use Illuminate\Database\Seeder;
 
 class MasterDaerahSeeder extends Seeder
@@ -12,6 +12,6 @@ class MasterDaerahSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        MasterDaerah::factory()->count(10)->create();
     }
 }

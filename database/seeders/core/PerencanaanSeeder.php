@@ -1,8 +1,8 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders\core;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Perencanaan;
 use Illuminate\Database\Seeder;
 
 class PerencanaanSeeder extends Seeder
@@ -12,6 +12,6 @@ class PerencanaanSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Perencanaan::factory()->count(10)->create();
     }
 }

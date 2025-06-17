@@ -1,8 +1,8 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders\core;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\MasterSubKegiatan;
 use Illuminate\Database\Seeder;
 
 class MasterSubKegiatanSeeder extends Seeder
@@ -12,6 +12,6 @@ class MasterSubKegiatanSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        MasterSubKegiatan::factory()->count(10)->create();
     }
 }

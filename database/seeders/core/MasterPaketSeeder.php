@@ -1,8 +1,8 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders\core;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\MasterPaket;
 use Illuminate\Database\Seeder;
 
 class MasterPaketSeeder extends Seeder
@@ -12,6 +12,6 @@ class MasterPaketSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        MasterPaket::factory()->count(10)->create();
     }
 }

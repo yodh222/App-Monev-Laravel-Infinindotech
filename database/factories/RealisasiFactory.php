@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\MasterPaket;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class RealisasiFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'master_paket_id' => MasterPaket::inRandomOrder()->value('id'),
+            'bulan' => $this->faker->randomElement(range(1, 12)),
+            'realisasi_fisik' => $this->faker->randomFloat(2, 0, 100),
+            'realisasi_keuangan' => $this->faker->randomFloat(2, 0, 1000000),
         ];
     }
 }
