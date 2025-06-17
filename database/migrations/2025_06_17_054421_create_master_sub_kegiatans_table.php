@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('master_sub_kegiatans', function (Blueprint $table) {
+        Schema::create('master_sub_kegiatan', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('master_daerah_id')->constrained('master_daerah')->cascadeOnDelete();
+            $table->string('nama_sub_kegiatan');
+            $table->string('kode_sub_kegiatan');
+            $table->decimal('pagu', 20, 2);
+            $table->year('tahun_anggaran');
             $table->timestamps();
         });
     }
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('master_sub_kegiatans');
+        Schema::dropIfExists('master_sub_kegiatan');
     }
 };

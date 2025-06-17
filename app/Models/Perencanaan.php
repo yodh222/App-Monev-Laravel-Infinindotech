@@ -9,4 +9,6 @@ class Perencanaan extends Model
 {
     /** @use HasFactory<\Database\Factories\PerencanaanFactory> */
     use HasFactory;
+
+    protected $table = 'perencanaan';
 }

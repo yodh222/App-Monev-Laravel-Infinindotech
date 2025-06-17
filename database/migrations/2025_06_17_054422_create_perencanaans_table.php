@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('perencanaans', function (Blueprint $table) {
+        Schema::create('perencanaan', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('master_paket_id')->constrained('master_paket')->cascadeOnDelete();
+            $table->tinyInteger('bulan');
+            $table->decimal('perencanaan_fisik', 5, 2);
+            $table->decimal('perencanaan_keuangan', 20, 2);
             $table->timestamps();
         });
     }
@@ -22,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('perencanaans');
+        Schema::dropIfExists('perencanaan');
     }
 };

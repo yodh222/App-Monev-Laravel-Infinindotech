@@ -9,4 +9,6 @@ class MasterDaerah extends Model
 {
     /** @use HasFactory<\Database\Factories\MasterDaerahFactory> */
     use HasFactory;
+
+    protected $table = 'master_daerah';
 }

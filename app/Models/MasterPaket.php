@@ -9,4 +9,6 @@ class MasterPaket extends Model
 {
     /** @use HasFactory<\Database\Factories\MasterPaketFactory> */
     use HasFactory;
+
+    protected $table = 'master_paket';
 }

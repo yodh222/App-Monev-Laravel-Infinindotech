@@ -9,4 +9,6 @@ class MasterSubKegiatan extends Model
 {
     /** @use HasFactory<\Database\Factories\MasterSubKegiatanFactory> */
     use HasFactory;
+
+    protected $table = 'master_sub_kegiatan';
 }

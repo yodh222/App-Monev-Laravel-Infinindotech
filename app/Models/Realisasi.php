@@ -9,4 +9,6 @@ class Realisasi extends Model
 {
     /** @use HasFactory<\Database\Factories\RealisasiFactory> */
     use HasFactory;
+
+    protected $table = 'realisasi';
 }
