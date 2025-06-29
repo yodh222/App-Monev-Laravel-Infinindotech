@@ -1,17 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PlanningController;
+use App\Http\Controllers\RealizationController;
+use App\Http\Controllers\MasterRegionController;
+use App\Http\Controllers\MasterPackageController;
+use App\Http\Controllers\MasterSubActivityController;
 
 Route::get('/', function () {
     return view('pages.welcome');
 });
 
-Route::resource('master-daerahs', \App\Http\Controllers\MasterDaerahController::class);
+Route::resource('master-regions', MasterRegionController::class);
 
-Route::resource('master-sub-kegiatans', \App\Http\Controllers\MasterSubKegiatanController::class);
+Route::resource('master-sub-activities', MasterSubActivityController::class);
 
-Route::resource('master-pakets', \App\Http\Controllers\MasterPaketController::class);
+Route::resource('master-packages', MasterPackageController::class);
 
-Route::resource('perencanaans', \App\Http\Controllers\PerencanaanController::class);
+Route::resource('plannings', PlanningController::class);
 
-Route::resource('realisasis', \App\Http\Controllers\RealisasiController::class);
+Route::resource('realizations', RealizationController::class);
