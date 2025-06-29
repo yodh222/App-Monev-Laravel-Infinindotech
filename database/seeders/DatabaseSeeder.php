@@ -5,12 +5,12 @@ namespace Database\Seeders;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Database\Seeders\core\RealisasiSeeder;
-use Database\Seeders\core\MasterPaketSeeder;
-use Database\Seeders\core\PerencanaanSeeder;
-use Database\Seeders\core\MasterDaerahSeeder;
-use Database\Seeders\core\RolePermissionSeeder;
-use Database\Seeders\core\MasterSubKegiatanSeeder;
+use Database\Seeders\Core\PlanningSeeder;
+use Database\Seeders\Core\RealizationSeeder;
+use Database\Seeders\Core\MasterRegionSeeder;
+use Database\Seeders\Core\MasterPackageSeeder;
+use Database\Seeders\Core\RolePermissionSeeder;
+use Database\Seeders\Core\MasterSubActivitySeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,11 +21,11 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             RolePermissionSeeder::class,
-            MasterDaerahSeeder::class,
-            MasterSubKegiatanSeeder::class,
-            MasterPaketSeeder::class,
-            PerencanaanSeeder::class,
-            RealisasiSeeder::class,
+            MasterRegionSeeder::class,
+            MasterSubActivitySeeder::class,
+            MasterPackageSeeder::class,
+            PlanningSeeder::class,
+            RealizationSeeder::class,
         ]);
     }
 }
