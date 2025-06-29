@@ -85,6 +85,7 @@ class BatchModel extends Command
                     }
                 }
             }
+            sleep(2);
         }
 
         $this->info("Semua model berhasil dibuat!");
